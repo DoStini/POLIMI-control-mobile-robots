@@ -14,19 +14,22 @@ int main(int argc, char** argv) {
 
     ros::Rate loop_rate(0.2); // TODO CHANGE TO CORRECT VALUE
 
+    int increment_value;
+    ros::param::param<int>("clock_speed", increment_value, 1);
+
     uint32_t timer = 0;
     while (ros::ok()) {
         std_msgs::UInt32 msg;
         msg.data = timer;
 
-        // ROS_INFO("CLOCK VALUE SENT: %d", msg.data);
+        ROS_INFO("CLOCK VALUE SENT: %d", msg.data);
 
         publisher.publish(msg);
 
         ros::spinOnce();
 
         loop_rate.sleep();
-        ++timer;
+        timer += increment_value;
     }
 
     return 0;
