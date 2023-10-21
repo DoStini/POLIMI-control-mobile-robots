@@ -1,0 +1,2 @@
+ros_basics
+-DCATKIN_DEVEL_PREFIX=/home/andremoreira9/documents/polimi/Robots/practical/devel -DCMAKE_INSTALL_PREFIX=/home/andremoreira9/documents/polimi/Robots/practical/install -G Unix Makefiles
