@@ -7,9 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/andremoreira9/documents/polimi/Robots/practical/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/andremoreira9/documents/polimi/Robots/practical/devel/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/andremoreira9/documents/polimi/Robots/practical/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/andremoreira9/documents/polimi/Robots/practical/build'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/andremoreira9/documents/polimi/Robots/practical/devel/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/andremoreira9/documents/polimi/Robots/practical/src:$ROS_PACKAGE_PATH"

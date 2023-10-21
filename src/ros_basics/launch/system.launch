@@ -1,0 +1,7 @@
+<launch>
+    <node name="sumup" pkg="ros_basics" type="sumup" output="screen" />
+    <node name="system_clock" pkg="ros_basics" type="system_clock" output="screen" />
+    <node name="counter1" pkg="ros_basics" type="counter" output="screen" />
+    <node name="counter2" pkg="ros_basics" type="counter" output="screen" />
+    <node name="counter3" pkg="ros_basics" type="counter" output="screen" />
+</launch>

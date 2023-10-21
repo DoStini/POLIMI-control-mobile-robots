@@ -228,4 +228,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "ros_basics/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake"
   "ros_basics/CMakeFiles/counter.dir/DependInfo.cmake"
   "ros_basics/CMakeFiles/system_clock.dir/DependInfo.cmake"
+  "ros_basics/CMakeFiles/sumup.dir/DependInfo.cmake"
   )

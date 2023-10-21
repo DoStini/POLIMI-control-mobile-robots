@@ -409,6 +409,20 @@ system_clock/fast:
 	cd /home/andremoreira9/documents/polimi/Robots/practical/build && $(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/system_clock.dir/build.make ros_basics/CMakeFiles/system_clock.dir/build
 .PHONY : system_clock/fast
 
+# Convenience name for target.
+ros_basics/CMakeFiles/sumup.dir/rule:
+	cd /home/andremoreira9/documents/polimi/Robots/practical/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ros_basics/CMakeFiles/sumup.dir/rule
+.PHONY : ros_basics/CMakeFiles/sumup.dir/rule
+
+# Convenience name for target.
+sumup: ros_basics/CMakeFiles/sumup.dir/rule
+.PHONY : sumup
+
+# fast build rule for target.
+sumup/fast:
+	cd /home/andremoreira9/documents/polimi/Robots/practical/build && $(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/sumup.dir/build.make ros_basics/CMakeFiles/sumup.dir/build
+.PHONY : sumup/fast
+
 src/counter.o: src/counter.cpp.o
 .PHONY : src/counter.o
 
@@ -432,6 +446,30 @@ src/counter.s: src/counter.cpp.s
 src/counter.cpp.s:
 	cd /home/andremoreira9/documents/polimi/Robots/practical/build && $(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/counter.dir/build.make ros_basics/CMakeFiles/counter.dir/src/counter.cpp.s
 .PHONY : src/counter.cpp.s
+
+src/sumup.o: src/sumup.cpp.o
+.PHONY : src/sumup.o
+
+# target to build an object file
+src/sumup.cpp.o:
+	cd /home/andremoreira9/documents/polimi/Robots/practical/build && $(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/sumup.dir/build.make ros_basics/CMakeFiles/sumup.dir/src/sumup.cpp.o
+.PHONY : src/sumup.cpp.o
+
+src/sumup.i: src/sumup.cpp.i
+.PHONY : src/sumup.i
+
+# target to preprocess a source file
+src/sumup.cpp.i:
+	cd /home/andremoreira9/documents/polimi/Robots/practical/build && $(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/sumup.dir/build.make ros_basics/CMakeFiles/sumup.dir/src/sumup.cpp.i
+.PHONY : src/sumup.cpp.i
+
+src/sumup.s: src/sumup.cpp.s
+.PHONY : src/sumup.s
+
+# target to generate assembly for a file
+src/sumup.cpp.s:
+	cd /home/andremoreira9/documents/polimi/Robots/practical/build && $(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/sumup.dir/build.make ros_basics/CMakeFiles/sumup.dir/src/sumup.cpp.s
+.PHONY : src/sumup.cpp.s
 
 src/system_clock.o: src/system_clock.cpp.o
 .PHONY : src/system_clock.o
@@ -486,10 +524,14 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... counter"
+	@echo "... sumup"
 	@echo "... system_clock"
 	@echo "... src/counter.o"
 	@echo "... src/counter.i"
 	@echo "... src/counter.s"
+	@echo "... src/sumup.o"
+	@echo "... src/sumup.i"
+	@echo "... src/sumup.s"
 	@echo "... src/system_clock.o"
 	@echo "... src/system_clock.i"
 	@echo "... src/system_clock.s"

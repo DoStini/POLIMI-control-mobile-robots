@@ -121,6 +121,7 @@ gtest/clean: googletest/clean
 # Recursive "all" directory target.
 ros_basics/all: ros_basics/CMakeFiles/counter.dir/all
 ros_basics/all: ros_basics/CMakeFiles/system_clock.dir/all
+ros_basics/all: ros_basics/CMakeFiles/sumup.dir/all
 .PHONY : ros_basics/all
 
 # Recursive "preinstall" directory target.
@@ -145,6 +146,7 @@ ros_basics/clean: ros_basics/CMakeFiles/std_msgs_generate_messages_nodejs.dir/cl
 ros_basics/clean: ros_basics/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 ros_basics/clean: ros_basics/CMakeFiles/counter.dir/clean
 ros_basics/clean: ros_basics/CMakeFiles/system_clock.dir/clean
+ros_basics/clean: ros_basics/CMakeFiles/sumup.dir/clean
 .PHONY : ros_basics/clean
 
 #=============================================================================
@@ -805,7 +807,7 @@ ros_basics/CMakeFiles/counter.dir/clean:
 ros_basics/CMakeFiles/system_clock.dir/all:
 	$(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/system_clock.dir/build.make ros_basics/CMakeFiles/system_clock.dir/depend
 	$(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/system_clock.dir/build.make ros_basics/CMakeFiles/system_clock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andremoreira9/documents/polimi/Robots/practical/build/CMakeFiles --progress-num=11,12 "Built target system_clock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andremoreira9/documents/polimi/Robots/practical/build/CMakeFiles --progress-num=13,14 "Built target system_clock"
 .PHONY : ros_basics/CMakeFiles/system_clock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -823,6 +825,32 @@ system_clock: ros_basics/CMakeFiles/system_clock.dir/rule
 ros_basics/CMakeFiles/system_clock.dir/clean:
 	$(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/system_clock.dir/build.make ros_basics/CMakeFiles/system_clock.dir/clean
 .PHONY : ros_basics/CMakeFiles/system_clock.dir/clean
+
+#=============================================================================
+# Target rules for target ros_basics/CMakeFiles/sumup.dir
+
+# All Build rule for target.
+ros_basics/CMakeFiles/sumup.dir/all:
+	$(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/sumup.dir/build.make ros_basics/CMakeFiles/sumup.dir/depend
+	$(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/sumup.dir/build.make ros_basics/CMakeFiles/sumup.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/andremoreira9/documents/polimi/Robots/practical/build/CMakeFiles --progress-num=11,12 "Built target sumup"
+.PHONY : ros_basics/CMakeFiles/sumup.dir/all
+
+# Build rule for subdir invocation for target.
+ros_basics/CMakeFiles/sumup.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andremoreira9/documents/polimi/Robots/practical/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ros_basics/CMakeFiles/sumup.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andremoreira9/documents/polimi/Robots/practical/build/CMakeFiles 0
+.PHONY : ros_basics/CMakeFiles/sumup.dir/rule
+
+# Convenience name for target.
+sumup: ros_basics/CMakeFiles/sumup.dir/rule
+.PHONY : sumup
+
+# clean rule for target.
+ros_basics/CMakeFiles/sumup.dir/clean:
+	$(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/sumup.dir/build.make ros_basics/CMakeFiles/sumup.dir/clean
+.PHONY : ros_basics/CMakeFiles/sumup.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -45,6 +45,7 @@
 /home/andremoreira9/documents/polimi/Robots/practical/build/ros_basics/CMakeFiles/std_msgs_generate_messages_py.dir
 /home/andremoreira9/documents/polimi/Robots/practical/build/ros_basics/CMakeFiles/counter.dir
 /home/andremoreira9/documents/polimi/Robots/practical/build/ros_basics/CMakeFiles/system_clock.dir
+/home/andremoreira9/documents/polimi/Robots/practical/build/ros_basics/CMakeFiles/sumup.dir
 /home/andremoreira9/documents/polimi/Robots/practical/build/ros_basics/CMakeFiles/test.dir
 /home/andremoreira9/documents/polimi/Robots/practical/build/ros_basics/CMakeFiles/edit_cache.dir
 /home/andremoreira9/documents/polimi/Robots/practical/build/ros_basics/CMakeFiles/rebuild_cache.dir

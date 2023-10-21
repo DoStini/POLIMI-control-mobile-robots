@@ -2,45 +2,44 @@
 #include "std_msgs/String.h"
 #include "std_msgs/UInt32.h"
 #include <stdint.h>
+#include <numeric>
 
-uint32_t remaining_nodes = 3;
-
-
-/**
- * This tutorial demonstrates simple sending of messages over the ROS system.
- */
-int main(int argc, char **argv)
-{
-  /**
-   * The ros::init() function needs to see argc and argv so that it can perform
-   * any ROS arguments and name remapping that were provided at the command line.
-   * For programmatic remappings you can use a different version of init() which takes
-   * remappings directly, but for most command-line programs, passing argc and argv is
-   * the easiest way to do it.  The third argument to init() is the name of the node.
-   *
-   * You must call one of the versions of ros::init() before using any other
-   * part of the ROS system.
-   */
-  ros::init(argc, argv, "system_clock");
-
-  /**
-   * NodeHandle is the main access point to communications with the ROS system.
-   * The first NodeHandle constructed will fully initialize this node, and the last
-   * NodeHandle destructed will close down the node.
-   */
-  ros::NodeHandle n;
-
-  ros::Publisher publisher = n.advertise<std_msgs::UInt32>("sum", 1000);
-
-  while (ros::ok() && remaining_nodes > 0)
-  {
-    ros::spinOnce();
-
-    loop_rate.sleep();
-    ++timer;
-  }
+uint32_t remaining_nodes = 3; // TODO REPLACE WITH N
+std::vector<uint32_t> values;
+ros::Publisher publisher;
 
 
-  return 0;
+void callback(const std_msgs::UInt32::ConstPtr& msg) {
+    values.push_back(msg->data);
+    // ROS_INFO("Value received: [%d]", msg->data);
+
+    if ((--remaining_nodes) != 0) {
+        return;
+    }
+
+    uint32_t total = std::accumulate(values.begin(), values.end(), 0) * 2; // TODO: REPLACE WITH alpha
+
+    std_msgs::UInt32 value_msg;
+    value_msg.data = total;
+
+    publisher.publish(value_msg);
+
+    ROS_INFO("The result is %d", total);
+
+    ros::shutdown();
+}
+
+int main(int argc, char** argv) {
+    ros::init(argc, argv, "system_clock");
+
+    ros::NodeHandle n;
+
+    ros::Subscriber sub = n.subscribe("value", 1000, callback);
+
+    publisher = n.advertise<std_msgs::UInt32>("sum", 1000);
+
+    ros::spin();
+
+    return 0;
 }
 

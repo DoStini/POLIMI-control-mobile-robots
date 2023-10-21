@@ -509,6 +509,19 @@ system_clock/fast:
 	$(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/system_clock.dir/build.make ros_basics/CMakeFiles/system_clock.dir/build
 .PHONY : system_clock/fast
 
+#=============================================================================
+# Target rules for targets named sumup
+
+# Build rule for target.
+sumup: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sumup
+.PHONY : sumup
+
+# fast build rule for target.
+sumup/fast:
+	$(MAKE) $(MAKESILENT) -f ros_basics/CMakeFiles/sumup.dir/build.make ros_basics/CMakeFiles/sumup.dir/build
+.PHONY : sumup/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -547,6 +560,7 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... sumup"
 	@echo "... system_clock"
 .PHONY : help
 
