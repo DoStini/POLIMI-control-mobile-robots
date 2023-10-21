@@ -21,7 +21,7 @@ int main(int argc, char **argv)
    * You must call one of the versions of ros::init() before using any other
    * part of the ROS system.
    */
-  ros::init(argc, argv, "talker");
+  ros::init(argc, argv, "system_clock");
 
   /**
    * NodeHandle is the main access point to communications with the ROS system.
@@ -62,19 +62,10 @@ int main(int argc, char **argv)
      * This is a message object. You stuff it with data, and then publish it.
      */
     std_msgs::UInt32 msg;
-
-    std::stringstream ss;
     msg.data = timer;
-    std::cout << "wtf" << timer << std::endl;
 
     ROS_INFO("CLOCK VALUE SENT: %d", msg.data);
 
-    /**
-     * The publish() function is how you send messages. The parameter
-     * is the message object. The type of this object must agree with the type
-     * given as a template parameter to the advertise<>() call, as was done
-     * in the constructor above.
-     */
     publisher.publish(msg);
 
     ros::spinOnce();

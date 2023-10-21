@@ -20,6 +20,9 @@ target_link_libraries(counter ${catkin_LIBRARIES})
 add_executable(system_clock src/system_clock.cpp)
 target_link_libraries(system_clock ${catkin_LIBRARIES})
 
+add_executable(sumup src/sumup.cpp)
+target_link_libraries(sumup ${catkin_LIBRARIES})
+
 # add_dependencies(system_clock ros_basics_generate_messages_cpp)
 
 # # System dependencies are found with CMake's conventions
