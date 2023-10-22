@@ -12,7 +12,7 @@ int main(int argc, char** argv) {
 
     ros::Publisher publisher = n.advertise<std_msgs::UInt32>("clock", 1000);
 
-    ros::Rate loop_rate(0.2); // TODO CHANGE TO CORRECT VALUE
+    ros::Rate loop_rate(0.2);
 
     int increment_value;
     ros::param::param<int>("clock_speed", increment_value, 1);

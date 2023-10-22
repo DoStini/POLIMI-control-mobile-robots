@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <numeric>
 
-uint32_t remaining_nodes = 3; // TODO REPLACE WITH N
+uint32_t remaining_nodes = 2;
 std::vector<uint32_t> values;
 ros::Publisher publisher;
 
@@ -17,7 +17,7 @@ void callback(const std_msgs::UInt32::ConstPtr& msg) {
         return;
     }
 
-    uint32_t total = std::accumulate(values.begin(), values.end(), 0) * 2; // TODO: REPLACE WITH alpha
+    uint32_t total = std::accumulate(values.begin(), values.end(), 0) * 2;
 
     std_msgs::UInt32 value_msg;
     value_msg.data = total;

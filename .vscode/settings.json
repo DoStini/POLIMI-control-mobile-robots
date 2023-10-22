@@ -1,11 +1,14 @@
 {
-"ros.distro": "noetic",
-"C_Cpp.intelliSenseEngine": "Tag Parser",
-"python.autoComplete.extraPaths": [
-    "/opt/ros/noetic/lib/python3.11/site-packages"
-],
-"cmake.sourceDirectory": "/home/andremoreira9/documents/polimi/Robots/practical/src/ros_basics",
-"files.associations": {
-    "cstdint": "cpp"
-}
+    "ros.distro": "noetic",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/noetic/lib/python3.11/site-packages"
+    ],
+    "cmake.sourceDirectory": "/home/andremoreira9/documents/polimi/Robots/practical/src/ros_basics",
+    "files.associations": {
+        "cstdint": "cpp"
+    },
+    "python.analysis.extraPaths": [
+        "/opt/ros/noetic/lib/python3.11/site-packages"
+    ]
 }

@@ -1,13 +1,12 @@
 #include "ros/ros.h"
 #include "std_msgs/UInt32.h"
 
-// TODO: REPLACE WITH C1
-uint32_t counter_value = 0;
+uint32_t counter_value = -15;
 ros::Publisher publisher;
 
 void callback(const std_msgs::UInt32::ConstPtr& msg) {
     // ROS_INFO("CLOCK RECEIVED: [%d]", msg->data);
-    uint32_t C2 = 3;
+    uint32_t C2 = 20;
 
     if ((++counter_value) != C2) {
         return;
